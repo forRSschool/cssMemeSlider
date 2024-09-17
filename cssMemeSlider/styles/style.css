@@ -60,10 +60,10 @@ input[type="radio"] {
     display: none;
 }
 
-#slide1:checked ~  .controls label:nth-child(1),
-#slide2:checked ~  .controls label:nth-child(2),
-#slide3:checked ~  .controls label:nth-child(3),
-#slide4:checked ~  .controls label:nth-child(4){
+#slide1:checked ~  .controls label:nth-child(1) div,
+#slide2:checked ~  .controls label:nth-child(2) div,
+#slide3:checked ~  .controls label:nth-child(3) div,
+#slide4:checked ~  .controls label:nth-child(4) div{
     background-color: transparent;
 }
 
@@ -95,23 +95,30 @@ input[type="radio"] {
 }
 
 .control {
-    width: 1em;
-    height: 1em;
-    background-color: #7faae8;
-    border-radius: 50%;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s ease;
-    border: 1px solid #7faae8;
     margin: 0.6em;
-    padding: 0.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.control:hover {
+.control div {
+    border-radius: 50%;
+    background-color: #7faae8;
+    width: 1em;
+    height: 1em;
+    transition: background-color 0.3s, border-color 0.3s ease;
+    border: 1px solid #7faae8;
+}
+
+.control:hover div{
     background-color: #fff;
     border-color: #fff;
 }
 
-.control:active {
+.control:active div{
     background-color: #7faae8;
     border-color: #7faae8;
 }
